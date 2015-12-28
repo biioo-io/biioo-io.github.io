@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Jekyll Material Design Lite</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="canonical" href="http://www.biioo.io/mdl/2015/08/11/jekyll-mdl.html">
+  <link rel="alternate" type="application/rss+xml" title="biioo" href="http://www.biioo.io/feed.xml" />
+
+  <!-- Material Design Lite css Library -->
+  <link rel="stylesheet" type="text/css" href="material-white-min.css">   
+  
+  <!-- Material Design Fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Custom theme css -->
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+
+  <body>
+
+    <!-- Start Layout -->
+    
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <!-- search layout -->
+<div class="super-search" id="js-search">
+  <ul class="super-search__results" id="js-search__results"></ul>        
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored super-search__close-btn" onclick="superSearch.toggle()">
+    <i class="material-icons">close</i>
+  </button>
+</div>
+<!-- /end search -->
+        <header class="mdl-layout__header">
+
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">biioo</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable is-upgraded">
+        <label class="mdl-button mdl-js-button mdl-button--icon" for="js-search__input">
+          <i class="material-icons">search</i>
+        </label>
+
+        <div class="mdl-textfield__expandable-holder" >
+          <input class="mdl-textfield__input super-search__input" type="text" id="js-search__input" />
+        </div>
+      </div>
+
+      <button class="mdl-button mdl-js-button mdl-button--icon" id="menu-lower-left">
+        <i class="material-icons">more_vert</i>
+      </button>
+
+      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-lower-left">
+        
+        <li><a href="www.myawesomelink.com" class="mdl-menu__item">Cool Option 1</a></li>
+        
+        <li><a href="www.myawesomelink.com" class="mdl-menu__item">Cool Option 2</a></li>
+        
+        <li><a href="www.myawesomelink.com" class="mdl-menu__item">Cool Option 3</a></li>
+        
+      </ul>
+    </div>
+  </header>
+
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Menu</span>
+    <nav class="mdl-navigation">
+    
+      
+      <a class="mdl-navigation__link" href="/about/">About</a>
+      
+    
+      
+    
+      
+    
+      
+    
+    </nav>
+
+  </div>
+    
+
+      <main class="mdl-layout__content">
+        <div class="post-ribbon"></div>
+<main class="post-main mdl-layout__content">
+  <div class="post-container mdl-grid">
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+    <div class="post-section mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+      <div class="mdl-color-text--grey-500">
+      Aug 11, 2015 • Oscar Cortez •  mdl  
+      </div>
+      <h3>Jekyll Material Design Lite</h3>
+      <article class="post-content">
+        <p><p>Bacon ipsum dolor amet esse et laborum, ground round hamburger venison rump meatball frankfurter cow capicola ut. Boudin dolore capicola, consequat ut filet mignon dolor duis incididunt. Frankfurter esse qui venison. Chuck adipisicing cillum excepteur laborum ex filet mignon landjaeger quis dolore kevin.</p>
+
+<p>Jerky consequat quis tri-tip pork prosciutto short ribs est ham hock consectetur. Dolore mollit fatback kevin, pork belly pastrami officia excepteur venison laborum strip steak in doner. Aliqua sausage spare ribs meatloaf meatball.</p>
+
+<p>Rump t-bone ad tenderloin tempor shank aliquip, frankfurter cupidatat landjaeger id tongue prosciutto kevin. Irure laborum brisket, doner exercitation ipsum anim sirloin magna tail jowl fugiat meatloaf alcatra. Jowl sed meatball spare ribs pork et ullamco duis. Incididunt deserunt porchetta sirloin ground round, leberkas aliquip corned beef anim biltong ea.</p>
+
+<p>Consectetur chicken salami lorem. Pancetta mollit aliqua sirloin ut officia short ribs ribeye ham hock occaecat shoulder incididunt. Laborum duis sausage id. Beef landjaeger sed leberkas tail doner spare ribs cupidatat fatback sausage. Filet mignon spare ribs quis shoulder pancetta ut eiusmod dolore. Venison velit in, landjaeger irure consectetur minim ham deserunt shoulder. Veniam corned beef t-bone sint consequat.</p>
+</p>
+      </article>
+      <!-- Disqus comments -->
+      
+    </div>
+  </div>
+</main>
+
+        <footer class="mdl-mega-footer">
+  <div class="mdl-mega-footer--middle-section">
+
+    <div class="mdl-mega-footer--drop-down-section">
+      <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer--heading">INFO</h1>
+      <ul class="mdl-mega-footer--link-list">
+        <li><a href="mailto:timdumatrait@gmail.com">timdumatrait@gmail.com</a></li>
+        <li><a href="/feed.xml">subscribe via RSS</a></li>
+      </ul>
+    </div>
+
+    <div class="mdl-mega-footer--drop-down-section">
+      <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer--heading">ABOUT</h1>
+      <ul class="mdl-mega-footer--link-list">
+        <li>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</li>
+      </ul>
+    </div>
+    
+  </div>
+</footer>
+
+      </main>
+
+    </div>
+    <!-- /End Layout -->
+
+    <!-- Material Design Lite js Library -->
+    <script type="text/javascript" src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+    
+    <script rel="javascript" type="text/javascript" src="/js/search.js"></script>
+    <script rel="javascript" type="text/javascript">
+      superSearch({
+        searchFile: '/feed.xml',
+        searchSelector: '#js-search', // CSS Selector for search container element.
+        inputSelector: '#js-search__input', // CSS selector for <input>
+        resultsSelector: '#js-search__results' // CSS selector for results container
+      });
+    </script>
+  </body>
+
+</html>
