@@ -4,10 +4,10 @@
     <title>biioo</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://www.biioo.io/_site//</link>
-    <atom:link href="http://www.biioo.io/_site//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Dec 2015 05:56:09 -0600</pubDate>
-    <lastBuildDate>Mon, 28 Dec 2015 05:56:09 -0600</lastBuildDate>
+    <link>http://www.biioo.io/_site/</link>
+    <atom:link href="http://www.biioo.io/_site/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 28 Dec 2015 05:59:29 -0600</pubDate>
+    <lastBuildDate>Mon, 28 Dec 2015 05:59:29 -0600</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -38,8 +38,8 @@
 
 </description>
         <pubDate>Sat, 10 Oct 2015 23:34:20 -0500</pubDate>
-        <link>http://www.biioo.io/_site//gdg/2015/10/10/google-developers-group.html</link>
-        <guid isPermaLink="true">http://www.biioo.io/_site//gdg/2015/10/10/google-developers-group.html</guid>
+        <link>http://www.biioo.io/_site/gdg/2015/10/10/google-developers-group.html</link>
+        <guid isPermaLink="true">http://www.biioo.io/_site/gdg/2015/10/10/google-developers-group.html</guid>
         
         
         <category>gdg</category>
@@ -75,8 +75,8 @@
 &lt;p&gt;Your Punishment Must Be More Severe.&lt;/p&gt;
 </description>
         <pubDate>Fri, 11 Sep 2015 08:34:20 -0500</pubDate>
-        <link>http://www.biioo.io/_site//material/2015/09/11/material-design-lite.html</link>
-        <guid isPermaLink="true">http://www.biioo.io/_site//material/2015/09/11/material-design-lite.html</guid>
+        <link>http://www.biioo.io/_site/material/2015/09/11/material-design-lite.html</link>
+        <guid isPermaLink="true">http://www.biioo.io/_site/material/2015/09/11/material-design-lite.html</guid>
         
         
         <category>material</category>
@@ -94,8 +94,8 @@
 &lt;p&gt;Consectetur chicken salami lorem. Pancetta mollit aliqua sirloin ut officia short ribs ribeye ham hock occaecat shoulder incididunt. Laborum duis sausage id. Beef landjaeger sed leberkas tail doner spare ribs cupidatat fatback sausage. Filet mignon spare ribs quis shoulder pancetta ut eiusmod dolore. Venison velit in, landjaeger irure consectetur minim ham deserunt shoulder. Veniam corned beef t-bone sint consequat.&lt;/p&gt;
 </description>
         <pubDate>Tue, 11 Aug 2015 04:34:20 -0500</pubDate>
-        <link>http://www.biioo.io/_site//mdl/2015/08/11/jekyll-mdl.html</link>
-        <guid isPermaLink="true">http://www.biioo.io/_site//mdl/2015/08/11/jekyll-mdl.html</guid>
+        <link>http://www.biioo.io/_site/mdl/2015/08/11/jekyll-mdl.html</link>
+        <guid isPermaLink="true">http://www.biioo.io/_site/mdl/2015/08/11/jekyll-mdl.html</guid>
         
         
         <category>mdl</category>
@@ -120,8 +120,8 @@
 
 </description>
         <pubDate>Sat, 11 Jul 2015 06:34:20 -0500</pubDate>
-        <link>http://www.biioo.io/_site//jekyll/2015/07/11/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://www.biioo.io/_site//jekyll/2015/07/11/welcome-to-jekyll.html</guid>
+        <link>http://www.biioo.io/_site/jekyll/2015/07/11/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://www.biioo.io/_site/jekyll/2015/07/11/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
