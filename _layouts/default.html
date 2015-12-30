@@ -3,9 +3,9 @@
 
   {% include head.html %}
 
-  <body>
-    <header>   
+  <body>   
     <!-- Start Layout -->
+    <header>
     {% if site.header_type == 'default' %}
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       {% include search_result.html %}
@@ -15,13 +15,12 @@
       {% include search_result.html %}
       {% include header.html %}
     {% endif %}
-
       <main class="mdl-layout__content">
         {{ content }}
         {% include footer.html %}
-      </main>
-
+      </main>    
     </div>
+    </header>
     <!-- /End Layout -->
 
     <!-- Material Design Lite js Library -->
@@ -38,7 +37,5 @@
         resultsSelector: '#js-search__results' // CSS selector for results container
       });
     </script>
-    </header>
   </body>
-
 </html>
