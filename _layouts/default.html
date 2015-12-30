@@ -4,20 +4,16 @@
   {% include head.html %}
 
   <body>
-
+    <header>   
     <!-- Start Layout -->
     {% if site.header_type == 'default' %}
-    <header>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       {% include search_result.html %}
       {% include header.html %}
-    </header>
     {% else %}
-    <header>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       {% include search_result.html %}
       {% include header.html %}
-    </header>
     {% endif %}
 
       <main class="mdl-layout__content">
@@ -42,6 +38,7 @@
         resultsSelector: '#js-search__results' // CSS selector for results container
       });
     </script>
+    </header>
   </body>
 
 </html>
