@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {% include head.html %}
+  <title>biioo</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+  <link rel="canonical" href="http://www.biioo.io/">
+  <link rel="alternate" type="application/rss+xml" title="biioo" href="http://www.biioo.io/feed.xml"/>
+
+  <!-- Material Design Lite css Library -->
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- Material Design Fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
 
   <body>   
     <!-- Start Layout -->
     <header>
-    {% if site.header_type == 'default' %}
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       {% include search_result.html %}
-      {% include header.html %}
-    {% else %}
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      {% include search_result.html %}
-      {% include header.html %}
-    {% endif %}
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <a href="http://www.biioo.io"><img class="android-logo-image" src="images/biioo-logo.png"></a>
+          </span>
+          <span class="android-mobile-title mdl-layout-title">
+            <a href="http://www.biioo.io"><img class="android-logo-image" src="images/biioo-logo.png"></a>
+          </span>
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+          <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="js-search__input">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="js-search__input">
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">About</a>
+            </nav>
+          </div>
+          <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+            <li class="mdl-menu__item">dumatrait.com</li>
+            <li disabled class="mdl-menu__item">History</li>
+          </ul>
+        </div>
+      </div>
       <main class="mdl-layout__content">
         {{ content }}
         {% include footer.html %}
-      </main>    
+      </main> 
+         
     </div>
     </header>
     <!-- /End Layout -->
