@@ -6,9 +6,24 @@
 </description>
     <link>http://www.biioo.io/</link>
     <atom:link href="http://www.biioo.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Feb 2016 18:02:43 -0500</pubDate>
-    <lastBuildDate>Sat, 27 Feb 2016 18:02:43 -0500</lastBuildDate>
+    <pubDate>Sat, 27 Feb 2016 20:39:37 -0500</pubDate>
+    <lastBuildDate>Sat, 27 Feb 2016 20:39:37 -0500</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
+    
+      <item>
+        <title>Welcome</title>
+        <description>&lt;p&gt;Welcome to biioo.io: a space for sharing tips, techniques, and observations on the application of technology in the AEC industry (and other experiments).  Now you’re probably thinking ‘another Revit blog :eyeroll:’. I’ll likely cover some ground on that topic here and there (only because I know things) but I’d like to keep the subject matter a little more broad.&lt;/p&gt;
+
+&lt;p&gt;As much as I’m looking forward to sharing some knowledge, I am equally excited to use it as a tool for my own edification. It’s very much a work in progress, hopefully I’ll manage to get comments integrated soon!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 27 Feb 2016 13:00:00 -0500</pubDate>
+        <link>http://www.biioo.io/welcome/2016/02/27/welcome.html</link>
+        <guid isPermaLink="true">http://www.biioo.io/welcome/2016/02/27/welcome.html</guid>
+        
+        
+        <category>Welcome</category>
+        
+      </item>
     
       <item>
         <title>Google Developers Group</title>

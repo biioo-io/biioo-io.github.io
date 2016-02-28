@@ -3,7 +3,8 @@ layout: post
 title:  "Jekyll Material Design Lite"
 date:   2015-08-11 09:34:20
 categories: mdl
-author: Tim
+author:
+highlight: false
 image: https://40.media.tumblr.com/efb92b8cbb6741ffa5ce92e885ce6a83/tumblr_inline_nr5dqmvXlY1sif8wc_540.png
 ---
 Bacon ipsum dolor amet esse et laborum, ground round hamburger venison rump meatball frankfurter cow capicola ut. Boudin dolore capicola, consequat ut filet mignon dolor duis incididunt. Frankfurter esse qui venison. Chuck adipisicing cillum excepteur laborum ex filet mignon landjaeger quis dolore kevin.

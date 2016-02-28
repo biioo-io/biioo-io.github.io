@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Welcome"
+date:   2016-02-27 18:00:00
+categories: Welcome
+author:
+highlight: false
+image: http://www.biioo.io/images/rad1.png
+---
+Welcome to biioo.io: a space for sharing tips, techniques, and observations on the application of technology in the AEC industry (and other experiments).  Now you're probably thinking 'another Revit blog :eyeroll:'. I'll likely cover some ground on that topic here and there (only because I know things) but I'd like to keep the subject matter a little more broad.
+
+As much as I'm looking forward to sharing some knowledge, I am equally excited to use it as a tool for my own edification. It's very much a work in progress, hopefully I'll manage to get comments integrated soon!
