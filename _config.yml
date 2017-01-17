@@ -1,16 +1,14 @@
 # Site settings
 title: biioo
-email: timdumatrait@gmail.com
+email: _
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Tips, techniques, and observations on the application of technology in the AEC industry (and other experiments).
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.biioo.io" # the base hostname & protocol for your site
 
 # Layout settings
 header_type: default # values [ drawer, default ]
-post_type: Drawer Nav + Highlight Post + Card Grid    # values [ highlight, default ]
+post_type: default    # values [ highlight, default ]
 pagination_type: default  # values [ ops, default ]
 
 more_vert:
@@ -20,12 +18,6 @@ more_vert:
   option2:
     name: Cool Option 2
     link: www.myawesomelink.com
-  option3:
-    name: Cool Option 3
-    link: www.myawesomelink.com
-
-disqus: false
-disqus_shortname: 'gdgmanagua'
 
 # Build settings
 markdown: kramdown
