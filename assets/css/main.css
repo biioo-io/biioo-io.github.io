@@ -1044,7 +1044,7 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		#header h1 {
-			font-size: 2em;
+			font-size: 5em;
 		}
 
 		#header p {
