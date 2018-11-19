@@ -1,172 +1,281 @@
 /*
-	Eventually by HTML5 UP
+	Multiverse by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function() {
+(function($) {
 
-	"use strict";
+	var	$window = $(window),
+		$body = $('body'),
+		$wrapper = $('#wrapper');
 
-	var	$body = document.querySelector('body');
-
-	// Methods/polyfills.
-
-		// classList | (c) @remy | github.com/remy/polyfills | rem.mit-license.org
-			!function(){function t(t){this.el=t;for(var n=t.className.replace(/^\s+|\s+$/g,"").split(/\s+/),i=0;i<n.length;i++)e.call(this,n[i])}function n(t,n,i){Object.defineProperty?Object.defineProperty(t,n,{get:i}):t.__defineGetter__(n,i)}if(!("undefined"==typeof window.Element||"classList"in document.documentElement)){var i=Array.prototype,e=i.push,s=i.splice,o=i.join;t.prototype={add:function(t){this.contains(t)||(e.call(this,t),this.el.className=this.toString())},contains:function(t){return-1!=this.el.className.indexOf(t)},item:function(t){return this[t]||null},remove:function(t){if(this.contains(t)){for(var n=0;n<this.length&&this[n]!=t;n++);s.call(this,n,1),this.el.className=this.toString()}},toString:function(){return o.call(this," ")},toggle:function(t){return this.contains(t)?this.remove(t):this.add(t),this.contains(t)}},window.DOMTokenList=t,n(Element.prototype,"classList",function(){return new t(this)})}}();
-
-		// canUse
-			window.canUse=function(p){if(!window._canUse)window._canUse=document.createElement("div");var e=window._canUse.style,up=p.charAt(0).toUpperCase()+p.slice(1);return p in e||"Moz"+up in e||"Webkit"+up in e||"O"+up in e||"ms"+up in e};
-
-		// window.addEventListener
-			(function(){if("addEventListener"in window)return;window.addEventListener=function(type,f){window.attachEvent("on"+type,f)}})();
-
-	// Play initial animations on page load.
-		window.addEventListener('load', function() {
-			window.setTimeout(function() {
-				$body.classList.remove('is-preload');
-			}, 100);
+	// Breakpoints.
+		breakpoints({
+			xlarge:  [ '1281px',  '1680px' ],
+			large:   [ '981px',   '1280px' ],
+			medium:  [ '737px',   '980px'  ],
+			small:   [ '481px',   '736px'  ],
+			xsmall:  [ null,      '480px'  ]
 		});
 
-	// Slideshow Background.
-		(function() {
+	// Hack: Enable IE workarounds.
+		if (browser.name == 'ie')
+			$body.addClass('ie');
 
-			// Settings.
-				var settings = {
+	// Touch?
+		if (browser.mobile)
+			$body.addClass('touch');
 
-					// Images (in the format of 'url': 'alignment').
-						images: {
-							'images/bg01.jpg': 'center',
-							'images/bg02.jpg': 'center',
-							'images/bg03.jpg': 'center',
-							'images/bg04.jpg': 'center'
-						},
+	// Transitions supported?
+		if (browser.canUse('transition')) {
 
-					// Delay.
-						delay: 6000
-
-				};
-
-			// Vars.
-				var	pos = 0, lastPos = 0,
-					$wrapper, $bgs = [], $bg,
-					k, v;
-
-			// Create BG wrapper, BGs.
-				$wrapper = document.createElement('div');
-					$wrapper.id = 'bg';
-					$body.appendChild($wrapper);
-
-				for (k in settings.images) {
-
-					// Create BG.
-						$bg = document.createElement('div');
-							$bg.style.backgroundImage = 'url("' + k + '")';
-							$bg.style.backgroundPosition = settings.images[k];
-							$wrapper.appendChild($bg);
-
-					// Add it to array.
-						$bgs.push($bg);
-
-				}
-
-			// Main loop.
-				$bgs[pos].classList.add('visible');
-				$bgs[pos].classList.add('top');
-
-				// Bail if we only have a single BG or the client doesn't support transitions.
-					if ($bgs.length == 1
-					||	!canUse('transition'))
-						return;
-
-				window.setInterval(function() {
-
-					lastPos = pos;
-					pos++;
-
-					// Wrap to beginning if necessary.
-						if (pos >= $bgs.length)
-							pos = 0;
-
-					// Swap top images.
-						$bgs[lastPos].classList.remove('top');
-						$bgs[pos].classList.add('visible');
-						$bgs[pos].classList.add('top');
-
-					// Hide last image after a short delay.
-						window.setTimeout(function() {
-							$bgs[lastPos].classList.remove('visible');
-						}, settings.delay / 2);
-
-				}, settings.delay);
-
-		})();
-
-	// Signup Form.
-		(function() {
-
-			// Vars.
-				var $form = document.querySelectorAll('#signup-form')[0],
-					$submit = document.querySelectorAll('#signup-form input[type="submit"]')[0],
-					$message;
-
-			// Bail if addEventListener isn't supported.
-				if (!('addEventListener' in $form))
-					return;
-
-			// Message.
-				$message = document.createElement('span');
-					$message.classList.add('message');
-					$form.appendChild($message);
-
-				$message._show = function(type, text) {
-
-					$message.innerHTML = text;
-					$message.classList.add(type);
-					$message.classList.add('visible');
-
+			// Play initial animations on page load.
+				$window.on('load', function() {
 					window.setTimeout(function() {
-						$message._hide();
-					}, 3000);
+						$body.removeClass('is-preload');
+					}, 100);
+				});
 
-				};
+			// Prevent transitions/animations on resize.
+				var resizeTimeout;
 
-				$message._hide = function() {
-					$message.classList.remove('visible');
-				};
+				$window.on('resize', function() {
 
-			// Events.
-			// Note: If you're *not* using AJAX, get rid of this event listener.
-				$form.addEventListener('submit', function(event) {
+					window.clearTimeout(resizeTimeout);
 
-					event.stopPropagation();
-					event.preventDefault();
+					$body.addClass('is-resizing');
 
-					// Hide message.
-						$message._hide();
-
-					// Disable submit.
-						$submit.disabled = true;
-
-					// Process form.
-					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
-					// but there's enough here to piece together a working AJAX submission call that does.
-						window.setTimeout(function() {
-
-							// Reset form.
-								$form.reset();
-
-							// Enable submit.
-								$submit.disabled = false;
-
-							// Show message.
-								$message._show('success', 'Thank you!');
-								//$message._show('failure', 'Something went wrong. Please try again.');
-
-						}, 750);
+					resizeTimeout = window.setTimeout(function() {
+						$body.removeClass('is-resizing');
+					}, 100);
 
 				});
 
-		})();
+		}
 
-})();
+	// Scroll back to top.
+		$window.scrollTop(0);
+
+	// Panels.
+		var $panels = $('.panel');
+
+		$panels.each(function() {
+
+			var $this = $(this),
+				$toggles = $('[href="#' + $this.attr('id') + '"]'),
+				$closer = $('<div class="closer" />').appendTo($this);
+
+			// Closer.
+				$closer
+					.on('click', function(event) {
+						$this.trigger('---hide');
+					});
+
+			// Events.
+				$this
+					.on('click', function(event) {
+						event.stopPropagation();
+					})
+					.on('---toggle', function() {
+
+						if ($this.hasClass('active'))
+							$this.triggerHandler('---hide');
+						else
+							$this.triggerHandler('---show');
+
+					})
+					.on('---show', function() {
+
+						// Hide other content.
+							if ($body.hasClass('content-active'))
+								$panels.trigger('---hide');
+
+						// Activate content, toggles.
+							$this.addClass('active');
+							$toggles.addClass('active');
+
+						// Activate body.
+							$body.addClass('content-active');
+
+					})
+					.on('---hide', function() {
+
+						// Deactivate content, toggles.
+							$this.removeClass('active');
+							$toggles.removeClass('active');
+
+						// Deactivate body.
+							$body.removeClass('content-active');
+
+					});
+
+			// Toggles.
+				$toggles
+					.removeAttr('href')
+					.css('cursor', 'pointer')
+					.on('click', function(event) {
+
+						event.preventDefault();
+						event.stopPropagation();
+
+						$this.trigger('---toggle');
+
+					});
+
+		});
+
+		// Global events.
+			$body
+				.on('click', function(event) {
+
+					if ($body.hasClass('content-active')) {
+
+						event.preventDefault();
+						event.stopPropagation();
+
+						$panels.trigger('---hide');
+
+					}
+
+				});
+
+			$window
+				.on('keyup', function(event) {
+
+					if (event.keyCode == 27
+					&&	$body.hasClass('content-active')) {
+
+						event.preventDefault();
+						event.stopPropagation();
+
+						$panels.trigger('---hide');
+
+					}
+
+				});
+
+	// Header.
+		var $header = $('#header');
+
+		// Links.
+			$header.find('a').each(function() {
+
+				var $this = $(this),
+					href = $this.attr('href');
+
+				// Internal link? Skip.
+					if (!href
+					||	href.charAt(0) == '#')
+						return;
+
+				// Redirect on click.
+					$this
+						.removeAttr('href')
+						.css('cursor', 'pointer')
+						.on('click', function(event) {
+
+							event.preventDefault();
+							event.stopPropagation();
+
+							window.location.href = href;
+
+						});
+
+			});
+
+	// Footer.
+		var $footer = $('#footer');
+
+		// Copyright.
+		// This basically just moves the copyright line to the end of the *last* sibling of its current parent
+		// when the "medium" breakpoint activates, and moves it back when it deactivates.
+			$footer.find('.copyright').each(function() {
+
+				var $this = $(this),
+					$parent = $this.parent(),
+					$lastParent = $parent.parent().children().last();
+
+				breakpoints.on('<=medium', function() {
+					$this.appendTo($lastParent);
+				});
+
+				breakpoints.on('>medium', function() {
+					$this.appendTo($parent);
+				});
+
+			});
+
+	// Main.
+		var $main = $('#main');
+
+		// Thumbs.
+			$main.children('.thumb').each(function() {
+
+				var	$this = $(this),
+					$image = $this.find('.image'), $image_img = $image.children('img'),
+					x;
+
+				// No image? Bail.
+					if ($image.length == 0)
+						return;
+
+				// Image.
+				// This sets the background of the "image" <span> to the image pointed to by its child
+				// <img> (which is then hidden). Gives us way more flexibility.
+
+					// Set background.
+						$image.css('background-image', 'url(' + $image_img.attr('src') + ')');
+
+					// Set background position.
+						if (x = $image_img.data('position'))
+							$image.css('background-position', x);
+
+					// Hide original img.
+						$image_img.hide();
+
+			});
+
+		// Poptrox.
+			$main.poptrox({
+				baseZIndex: 20000,
+				caption: function($a) {
+
+					var s = '';
+
+					$a.nextAll().each(function() {
+						s += this.outerHTML;
+					});
+
+					return s;
+
+				},
+				fadeSpeed: 300,
+				onPopupClose: function() { $body.removeClass('modal-active'); },
+				onPopupOpen: function() { $body.addClass('modal-active'); },
+				overlayOpacity: 0,
+				popupCloserText: '',
+				popupHeight: 150,
+				popupLoaderText: '',
+				popupSpeed: 300,
+				popupWidth: 150,
+				selector: '.thumb > a.image',
+				usePopupCaption: true,
+				usePopupCloser: true,
+				usePopupDefaultStyling: false,
+				usePopupForceClose: true,
+				usePopupLoader: true,
+				usePopupNav: true,
+				windowMargin: 50
+			});
+
+			// Hack: Set margins to 0 when 'xsmall' activates.
+				breakpoints.on('<=xsmall', function() {
+					$main[0]._poptrox.windowMargin = 0;
+				});
+
+				breakpoints.on('>xsmall', function() {
+					$main[0]._poptrox.windowMargin = 50;
+				});
+
+})(jQuery);
