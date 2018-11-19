@@ -1,5 +1,5 @@
 ///
-/// Multiverse by HTML5 UP
+/// Phantom by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -7,82 +7,20 @@
 /* Wrapper */
 
 	#wrapper {
-		@include vendor('transition', (
-			'-moz-filter #{_duration(panel)} ease',
-			'-webkit-filter #{_duration(panel)} ease',
-			'-ms-filter #{_duration(panel)} ease',
-			'filter #{_duration(panel)} ease'
-		));
-		position: relative;
+		> * {
+			> .inner {
+				$gutter: _size(gutter);
 
-		&:after {
-			@include vendor('pointer-events', 'none');
-			@include vendor('transition', (
-				'opacity #{_duration(modal)} ease',
-				'visibility #{_duration(modal)}',
-			));
-			background: _palette(bg-overlay-alt);
-			content: '';
-			display: block;
-			height: 100%;
-			left: 0;
-			opacity: 0;
-			position: absolute;
-			top: 0;
-			visibility: hidden;
-			width: 100%;
-			z-index: 1;
+				width: 100%;
+				max-width: _size(inner);
+				margin: 0 auto;
+				padding: 0 $gutter;
 
-			body.ie & {
-				background: _palette(bg-ie-overlay-alt);
-			}
-		}
+				@include breakpoint('<=small') {
+					$gutter: _size(gutter) * 0.5;
 
-		body.modal-active & {
-			@include vendor('filter', 'blur(8px)');
-
-			&:after {
-				@include vendor('pointer-events', 'auto');
-				opacity: 1;
-				visibility: visible;
-				z-index: _misc(z-index-base) + 3;
-			}
-		}
-
-		&:before {
-			@include vendor('animation', 'spinner 1s infinite linear !important');
-			@include vendor('pointer-events', 'none');
-			@include vendor('transition', (
-				'top 0.75s ease-in-out',
-				'opacity 0.35s ease-out',
-				'visibility 0.35s'
-			));
-			background-image: url('images/spinner.svg');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			content: '';
-			display: block;
-			font-size: 2em;
-			height: 2em;
-			left: 50%;
-			line-height: 2em;
-			margin: -1em 0 0 -1em;
-			opacity: 0;
-			position: fixed;
-			text-align: center;
-			top: 75%;
-			visibility: hidden;
-			width: 2em;
-		}
-
-		body.is-preload & {
-			&:before {
-				@include vendor('transition', 'opacity 1s ease-out !important');
-				@include vendor('transition-delay', '0.5s !important');
-				opacity: 0.25;
-				top: 50%;
-				visibility: visible;
+					padding: 0 $gutter;
+				}
 			}
 		}
 	}
