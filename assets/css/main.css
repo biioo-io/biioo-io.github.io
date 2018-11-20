@@ -2597,7 +2597,7 @@ input, select, textarea {
 					height: 100%;
 					opacity: 1.0;
 					z-index: 1;
-					opacity: 0.8;
+					opacity: 1;
 				}
 
 				.tiles article > .image:after {
@@ -2717,7 +2717,7 @@ input, select, textarea {
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
 					background-color: #333333;
-					opacity: 0.35;
+					opacity: 0.25;
 				}
 
 				body:not(.is-touch) .tiles article:hover > .image:after {
