@@ -3,7 +3,7 @@
 title: BIIOO
 logo: # You can add own logo. For example '/images/logo.png'.
 author: Biioo Inc.
-description: Home of Biioo Ventures
+description: Home of Biioo Holdings
 
 
 #-------------------------------
@@ -25,7 +25,7 @@ menu__settings:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Welcome to Biioo Ventures.
+  hero__title: Welcome to Biioo Holdings.
   hero__description: We are...
 
 
