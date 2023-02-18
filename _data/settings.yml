@@ -2,8 +2,8 @@
 # Site Settings
 title: BIIOO
 logo: # You can add own logo. For example '/images/logo.png'.
-author: Biioo Inc.
-description: Home of Biioo Holdings
+author: BIIOO Inc.
+description: Home of BIIOO Holdings
 
 
 #-------------------------------
@@ -25,7 +25,7 @@ menu__settings:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Welcome to Biioo Holdings.
+  hero__title: Welcome to BIIOO Holdings.
   hero__description: We are...
 
 
