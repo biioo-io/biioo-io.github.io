@@ -988,7 +988,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #1fcaa7;
+			background-color: #624DF8;
 		}
 
 		input[type="submit"]:active,
@@ -996,7 +996,7 @@ input, select, textarea {
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: #199e83;
+			background-color: #624DF8;
 		}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
