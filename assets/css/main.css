@@ -1,5 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:400,500');
 
 /*
 	Eventually by HTML5 UP
@@ -779,6 +780,7 @@ button,
 
 /* Header */
 #header h1 {
+  font-family: "Orbitron", sans-serif;
   font-size: 3.25em;
   margin: 0 0 0.55em 0; }
 
