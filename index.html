@@ -20,10 +20,17 @@
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" action="https://formspree.io/f/xgebkokb" method="POST">
+<!--
+		<form id="signup-form" action="https://formspree.io/f/xgebkokb" method="POST">
 				<input type="email" name="email" id="email" placeholder="Email" />
 				<input type="message" name="message" id="message" placeholder="Message"/>
 				<input type="submit" value="Submit" />
+			</form>
+-->
+			<form action="https://formspree.io/f/xgebkokb" method="POST">
+  				<label> Your email:<input type="email" name="email"></label>
+  				<label> Your message:<textarea name="message"></textarea></label>
+				<button type="submit">Send</button>
 			</form>
 
 		<!-- Footer -->
