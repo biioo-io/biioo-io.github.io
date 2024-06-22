@@ -797,7 +797,7 @@ button,
 	  
 @media (min-width: 736px) {
 	.form-element {
-		width: 40em;  /* Sets max width of containing element */
+		width: 38em;  /* Sets max width of containing element */
 	}
 }
 
