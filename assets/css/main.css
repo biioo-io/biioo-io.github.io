@@ -918,4 +918,5 @@ button,
 
 .form-element {
 	margin-bottom: 10px;  /* Adjust the value for desired spacing */
+	max-width: 75%;  /* Sets max width to 100% of containing element */
 }
