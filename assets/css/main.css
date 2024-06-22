@@ -837,6 +837,11 @@ button,
 	.form-element {
 		width: 18em;  /* Sets max width to 18em of containing element */
 	}
+
+	input[type="email"] {
+   	 /* Limit input width, allow text wrapping */
+  	  width: 16em;  /* Adjust as needed */
+ 	}
 }
 
 /* Footer */
