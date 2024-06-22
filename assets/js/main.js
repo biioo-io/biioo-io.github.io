@@ -139,7 +139,6 @@
 				$form.addEventListener('submit', function(event) {
 
 					event.stopPropagation();
-					event.preventDefault();
 
 					// Hide message.
 						$message._hide();
@@ -150,7 +149,7 @@
 					// Process form.
 					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
 					// but there's enough here to piece together a working AJAX submission call that does.
-						window.setTimeout(function() {
+						window.setTimeout(function() {		
 
 							// Reset form.
 								$form.reset();
