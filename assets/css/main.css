@@ -830,23 +830,14 @@ button,
 .form-element {
 	width: 100%;  /* Set to 100% for initial layout */
 	margin-bottom: 10px;  /* Add spacing */
+	flex-grow: 1; /* Elements share space equally (flexbox required) */
 }
 	  
-	  /* Styles for smaller screens (tablets and mobiles): */
+/* Styles for larger screens (laptops and desktops): */
 @media (min-width: 768px) {
 	.form-element {
-		width: 32em;  /* Sets max width to 18em of containing element */
+		width: 48em;  /* Sets max width of containing element */
 	}
-
-	input[type="email"] {
-   	 /* Limit input width, allow text wrapping */
-  	  width: 36em;  /* Adjust as needed */
- 	}
-
-	button[type="submit"] {
-   	 /* Limit input width, allow text wrapping */
-  	  width: 36em;  /* Adjust as needed */
- 	}
 }
 
 /* Footer */
