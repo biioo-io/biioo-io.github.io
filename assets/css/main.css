@@ -917,14 +917,13 @@ button,
       position: relative; } }
 
 .form-element {
-	width: 18em;  /* Set to 18em for initial layout */
+	max-width: 18em;  /* Set to 18em for initial layout */
 	margin-bottom: 10px;  /* Add spacing */
 }
 	  
 	  /* Styles for smaller screens (tablets and mobiles): */
 @media (max-width: 480px) {
 	.form-element {
-		margin: 10px auto;  /* Add margins and center horizontally */
 		max-width: 100%;  /* Sets max width to 100% of containing element */
 	}
 }
