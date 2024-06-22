@@ -842,6 +842,11 @@ button,
    	 /* Limit input width, allow text wrapping */
   	  width: 36em;  /* Adjust as needed */
  	}
+
+	button[type="submit"] {
+   	 /* Limit input width, allow text wrapping */
+  	  width: 36em;  /* Adjust as needed */
+ 	}
 }
 
 /* Footer */
