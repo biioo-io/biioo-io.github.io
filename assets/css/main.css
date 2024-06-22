@@ -471,7 +471,8 @@ ul.icons {
 form {
 	display: flex;  /* Enable flexbox for the form */
 	max-width: 100%;  /* Allow full width on small screens */
-  }
+  	flex-direction: column;  /* Arrange elements vertically */
+}
 
 label {
   color: #fff;
@@ -790,12 +791,11 @@ button,
 
 /* Signup Form */
 .form-element {
-	width: 100%;  /* Set to 100% for initial layout */
+	width: 100%;  /* Set to 100% for initial layout on smaller screens */
 	margin-bottom: 10px;  /* Add spacing */
 	flex-grow: 1; /* Elements share space equally (flexbox required) */
 }
 	  
-/* Styles for larger screens (laptops and desktops): */
 @media (min-width: 768px) {
 	.form-element {
 		width: 48em;  /* Sets max width of containing element */
