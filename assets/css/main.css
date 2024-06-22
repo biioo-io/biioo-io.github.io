@@ -799,6 +799,8 @@ button,
 @media (min-width: 736px) {
 	.form-element {
 		width: 36em;  /* Sets max width of containing element */
+		margin-bottom: 10px;  /* Add spacing */
+		flex-grow: 1; /* Elements share space equally (flexbox required) */
 	}
 }
 
