@@ -796,7 +796,7 @@ button,
 	flex-grow: 1; /* Elements share space equally (flexbox required) */
 }
 	  
-@media (min-width: 768px) {
+@media (min-width: 736px) {
 	.form-element {
 		width: 36em;  /* Sets max width of containing element */
 	}
