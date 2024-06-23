@@ -95,7 +95,7 @@ html {
 html, body {
   height: 100%;
   overflow-x: hidden;
-  width: 100%; }
+  flex: 1; }
   @media screen and (max-height: 640px) {
     html, body {
       height: auto;
