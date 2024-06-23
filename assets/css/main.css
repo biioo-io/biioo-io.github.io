@@ -801,7 +801,7 @@ button,
 	}
 
 	.form-element button {
-		width: 38em;  /* Sets max width of containing element */
+		flex: 1;  /* Sets max width of containing element */
 	}
 }
 
