@@ -799,10 +799,6 @@ button,
 	.form-element {
 		width: 38em;  /* Sets max width of containing element */
 	}
-
-	.form-element input[type="submit"] {
-		width: 38em;
-	}
 }
 
 /* Footer */
