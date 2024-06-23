@@ -255,7 +255,7 @@ body, input, select, textarea {
       font-size: 12pt; } }
   @media screen and (max-width: 1280px) {
     body, input, select, textarea {
-      font-size: 11pt; } }
+      font-size: 12pt; } }
   @media screen and (max-width: 980px) {
     body, input, select, textarea {
       font-size: 12pt; } }
@@ -799,6 +799,10 @@ button,
 @media (min-width: 736px) {
 	.form-element {
 		width: 38em;  /* Sets max width of containing element */
+	}
+
+	.form-element input[type="submit"] {
+		flex-grow: 1;
 	}
 }
 
