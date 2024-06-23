@@ -803,7 +803,7 @@ button,
 
 .form-element-button {
 	flex-grow: 1; /* Elements share space equally (flexbox required) */
-	margin-top: 10px;  /* Add spacing */
+	margin-top: 20px;  /* Add spacing */
 }
 	  
 @media (min-width: 736px) {
