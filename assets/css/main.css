@@ -802,7 +802,7 @@ button,
 	}
 
 	.form-element input[type="submit"] {
-		flex-grow: 1;
+		width: 38em;
 	}
 }
 
