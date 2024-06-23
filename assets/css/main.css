@@ -736,6 +736,7 @@ button,
   padding: 0 1.125em;
   text-align: center;
   text-decoration: none;
+  flex-grow: 1;
   white-space: nowrap; }
   input[type="submit"]:hover,
   input[type="reset"]:hover,
