@@ -800,9 +800,16 @@ button,
 	.form-element {
 		width: 38em;  /* Sets max width of containing element */
 	}
+}
 
-	.form-element button {
-		flex: 1;  /* Sets max width of containing element */
+.form-element-button {
+	flex-grow: 1; /* Elements share space equally (flexbox required) */
+	margin-top: 10px;  /* Add spacing */
+}
+	  
+@media (min-width: 736px) {
+	.form-element-button {
+		width: 38em;  /* Sets max width of containing element */
 	}
 }
 
